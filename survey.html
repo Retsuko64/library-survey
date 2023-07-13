@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Survey</title>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Istanbul_Technical_University_emblem.svg/1200px-Istanbul_Technical_University_emblem.svg.png"
+        alt="A logo of Istanbul Technical University" width="100" height="100">
+        <nav>
+            <ul>
+                <li>Question01</li>
+                <li>Question02</li>
+                <li>Question03</li>
+                <li>Question04</li>
+                <li>Question05</li>
+                <li>Question06</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to our Library Survey</h1>
+      <h2>Please give us 5 minutes of your time to fill out this survey, it will help us better understand the situation
+        at our libraries in order to better accomodate most students!
+      </h3>
+
+      <form>
+        <section class="question01">
+          <h3>Question01</h3>
+          <h3>The library is a better study area than at home</h3>
+          
+            <label for="agree">Agree</label>
+            <input id="agree" name="question01" type="radio">
+
+            <label for="neutral">Neutral</label>
+            <input id="neutral" name="question01" type="radio">
+
+            <label for="disagree">Disagree</label>
+            <input id="disagree" name="question01" type="radio">
+          
+        </section>
+
+        <section id="question02">
+          <h3>Question02</h3>
+          <h3>I prefer reading actual books over e-book</h3>
+
+          <label for="agree">Agree</label>
+          <input id="agree" name="question02" type="radio">
+
+          <label for="neutral">Neutral</label>
+          <input id="neutral" name="question02" type="radio">
+
+          <label for="disagree">Disagree</label>
+          <input id="disagree" name="question02" type="radio">
+        </section>
+
+        <section id="question03">
+            <h3>Question03</h3>
+            <h3>I come to the library...</h3>
+
+            <label for="never">Never</label>
+            <input id="never" name="question03" type="radio">
+
+            <label for="1-2">1-2 days a week</label>
+            <input id="1-2" name="question03" type="radio">
+
+            <label for="3-4">3-4 days a week</label>
+            <input id="3-4" name="question03" type="radio">
+
+            <label for="everyday">Almost Everyday!</label>
+            <input id="everyday" name="question03" type="radio">
+        </section>
+
+        <section id="question04">
+            <h3>Question04</h3>
+            <label for="department"><strong>Department:</strong></label>
+            <br><br>
+            <input id="deparment" name="question04">
+        </section>
+
+        <section id="question05">
+          <h3>Question05</h3>
+          <h3>I come to the library mostly before midterms/finals</h3>
+
+          <label for="agree">Agree</label>
+          <input id="agree" name="question05" type="radio">
+
+          <label for="neutral">Neutral</label>
+          <input id="neutral" name="question05" type="radio">
+
+          <label for="disagree">Disagree</label>
+          <input id="disagree" name="question05" type="radio">
+        </section>
+
+        <section id="question06">
+            <h3>Question06</h3>
+            <h3>Is there something that bothers you preventing you from coming to our library?</h3>
+
+            <input id="answer" name="question06" type="text">
+        </section>
+
+        <h3>Contact Info</h3>
+
+        <section id="contact-info">
+            <label for="email">Email:*</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="full-name">Full Name:</label>
+            <input type="text" name="full-name" id="full-name" required pattern="[a-zA-Z]+">
+            <br><br>
+            <label for="student-id">Student ID:</label>
+            <input type="text" name="student-id" id="student-id" required pattern="[0-9]{9}">
+        </section>
+
+        <input type="submit" value="Done"> 
+      </form>
+
+    </main>
+  </body>
+</html>

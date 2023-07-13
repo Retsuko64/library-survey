@@ -1,0 +1,32 @@
+body {
+    position: relative;
+    text-align: center;
+}
+
+ul {
+    margin: 30px auto;
+
+}
+
+li {
+    display: inline-block;
+    width: 100px;
+}
+
+h1 {
+    background-color: grey;
+    font-family: 'Century Gothic';
+    font-size: 35px;
+    margin: 0 auto;
+}
+
+h2{
+    background-color: grey;
+    font-family: "Compact";
+    margin: 0 auto;
+}
+
+main{
+    font-family: 'Varela Round', sans-serif;
+}
+
