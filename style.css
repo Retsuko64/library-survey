@@ -12,8 +12,15 @@ section {
 }
 
 li {
+    font-family: 'Century Gothic';
+    font-size: 15px;
     display: inline-block;
+    border: 1px solid rgb(33, 113, 162);
     width: 100px;
+}
+
+li:hover {
+    background-color: rgb(23, 80, 116);
 }
 
 h1 {
@@ -34,9 +41,5 @@ h2{
 
 h3 {
     font-family: 'Lato';
-}
-
-main{
-    font-family: 'Varela Round', sans-serif;
 }
 
