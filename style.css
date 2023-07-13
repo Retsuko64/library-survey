@@ -5,7 +5,10 @@ body {
 
 ul {
     margin: 30px auto;
+}
 
+section {
+    margin:60px auto;
 }
 
 li {
@@ -14,16 +17,23 @@ li {
 }
 
 h1 {
-    background-color: grey;
     font-family: 'Century Gothic';
     font-size: 35px;
     margin: 0 auto;
+    letter-spacing: 0.2em;
+}
+
+.banner-color {
+    background-color: hsl(180, 50%, 46%);
 }
 
 h2{
-    background-color: grey;
-    font-family: "Compact";
+    font-family: 'Pangolin';
     margin: 0 auto;
+}
+
+h3 {
+    font-family: 'Lato';
 }
 
 main{
