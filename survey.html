@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <title>Survey</title>
+    <title>ITU Library Survey</title>
+    <script src="./toSubmit.js"></script>
     <link href="./style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
 
   <body>
     <header>
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Istanbul_Technical_University_emblem.svg/1200px-Istanbul_Technical_University_emblem.svg.png"
-        alt="A logo of Istanbul Technical University" width="100" height="100">
+      <a href="https://www.itu.edu.tr/en"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Istanbul_Technical_University_emblem.svg/1200px-Istanbul_Technical_University_emblem.svg.png"
+        alt="A logo of Istanbul Technical University" width="100" height="100"></a>
         <nav>
             <ul>
                 <li><a href="https://www.itu.edu.tr/en">Home</a></li>
@@ -32,8 +32,7 @@
           at our libraries in order to better accomodate most students!</h2>
       </div>
       
-      
-      <form>
+      <form id="survey">
         <section class="question01">
           <h3>Question01</h3>
           <h3>The library is a better study area than at home</h3>
@@ -46,7 +45,6 @@
 
             <label for="disagree">Disagree</label>
             <input id="disagree" name="question01" type="radio">
-          
         </section>
 
         <section id="question02">
@@ -84,7 +82,7 @@
             <h3>Question04</h3>
             <label for="department">Department:</label>
             <br><br>
-            <input id="deparment" name="question04">
+            <input id="deparment" name="question04" placeholder="Computer Engineering-Electrical Engineering...">
         </section>
 
         <section id="question05">
@@ -105,24 +103,31 @@
             <h3>Question06</h3>
             <h3>Is there something that bothers you preventing you from coming to our library?</h3>
 
-            <input id="answer" name="question06" type="text">
+            <textarea id="answer" name="question06" type="text" height="100px" width="300px" style="width: 310px; height: 105px;"
+            maxlength="200" minlength="10" placeholder="please type here"></textarea>
         </section>
 
-        <h3>Contact Info</h3>
-
         <section id="contact-info">
+            <h3>Contact Info</h3>
             <label for="email">Email:*</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required placeholder="please enter your email">
             <br><br>
-            <label for="full-name">Full Name:</label>
-            <input type="text" name="full-name" id="full-name" required pattern="[a-zA-Z]+">
+            <label for="full-name">Full Name:*</label>
+            <input type="text" name="full-name" id="full-name" required pattern="[a-zA-Z]+" placeholder="Hassan Fakih">
             <br><br>
-            <label for="student-id">Student ID:</label>
-            <input type="text" name="student-id" id="student-id" required pattern="[0-9]{9}">
+            <label for="student-id">Student ID:*</label>
+            <input type="text" name="student-id" id="student-id" required pattern="[0-9]{9}" placeholder="121200078">
         </section>
 
         <input type="submit" value="Done"> 
       </form>
+
+      <footer>
+        <h2>SHARE</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/292px-Logo_of_Twitter.svg.png" width="50px" height="50px">
+        <img src="https://w7.pngwing.com/pngs/274/823/png-transparent-icon-essential-instagram-2016-app-logo-vector-images-social-networks.png" width="50px" height="50px">
+        <p>Page made by Hassan Fakih Osman - 2023</p>
+      </footer>
 
     </main>
   </body>
