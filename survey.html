@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>ITU Library Survey</title>
-    <script src="./toSubmit.js"></script>
     <link href="./style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,33 +31,33 @@
           at our libraries in order to better accomodate most students!</h2>
       </div>
       
-      <form id="survey">
+      <form method="POST" id="survey">
         <section class="question01">
           <h3>Question01</h3>
           <h3>The library is a better study area than at home</h3>
           
-            <label for="agree">Agree</label>
-            <input id="agree" name="question01" type="radio">
+            <label for="agree1">Agree</label>
+            <input id="agree1" name="question01" type="radio" value="agree">
 
-            <label for="neutral">Neutral</label>
-            <input id="neutral" name="question01" type="radio">
+            <label for="neutral1">Neutral</label>
+            <input id="neutral1" name="question01" type="radio" value="neutral">
 
-            <label for="disagree">Disagree</label>
-            <input id="disagree" name="question01" type="radio">
+            <label for="disagree1">Disagree</label>
+            <input id="disagree1" name="question01" type="radio" value="disagree">
         </section>
 
         <section id="question02">
           <h3>Question02</h3>
           <h3>I prefer reading actual books over e-book</h3>
 
-          <label for="agree">Agree</label>
-          <input id="agree" name="question02" type="radio">
+          <label for="agree2">Agree</label>
+          <input id="agree2" name="question02" type="radio" value="agree">
 
-          <label for="neutral">Neutral</label>
-          <input id="neutral" name="question02" type="radio">
+          <label for="neutral2">Neutral</label>
+          <input id="neutral2" name="question02" type="radio" value="neutral">
 
-          <label for="disagree">Disagree</label>
-          <input id="disagree" name="question02" type="radio">
+          <label for="disagree2">Disagree</label>
+          <input id="disagree2" name="question02" type="radio" value="disagree">
         </section>
 
         <section id="question03">
@@ -66,37 +65,37 @@
             <h3>I come to the library...</h3>
 
             <label for="never">Never</label>
-            <input id="never" name="question03" type="radio">
+            <input id="never" name="question03" type="radio" value="never">
 
             <label for="1-2">1-2 days a week</label>
-            <input id="1-2" name="question03" type="radio">
+            <input id="1-2" name="question03" type="radio" value="1-2">
 
             <label for="3-4">3-4 days a week</label>
-            <input id="3-4" name="question03" type="radio">
+            <input id="3-4" name="question03" type="radio" value="3-4">
 
             <label for="everyday">Almost Everyday!</label>
-            <input id="everyday" name="question03" type="radio">
+            <input id="everyday" name="question03" type="radio" value="everyday">
         </section>
 
         <section id="question04">
             <h3>Question04</h3>
             <label for="department">Department:</label>
             <br><br>
-            <input id="deparment" name="question04" placeholder="Computer Engineering-Electrical Engineering...">
+            <input id="department" name="question04" placeholder="Computer Engineering-Electrical Engineering..." pattern="[a-zA-Z ]+">
         </section>
 
         <section id="question05">
           <h3>Question05</h3>
           <h3>I come to the library mostly before midterms/finals</h3>
 
-          <label for="agree">Agree</label>
-          <input id="agree" name="question05" type="radio">
+          <label for="agree5">Agree</label>
+          <input id="agree5" name="question05" type="radio" value="agree">
 
-          <label for="neutral">Neutral</label>
-          <input id="neutral" name="question05" type="radio">
+          <label for="neutral5">Neutral</label>
+          <input id="neutral5" name="question05" type="radio" value="neutral">
 
-          <label for="disagree">Disagree</label>
-          <input id="disagree" name="question05" type="radio">
+          <label for="disagree5">Disagree</label>
+          <input id="disagree5" name="question05" type="radio" value="disagree">
         </section>
 
         <section id="question06">
@@ -110,16 +109,16 @@
         <section id="contact-info">
             <h3>Contact Info</h3>
             <label for="email">Email:*</label>
-            <input type="email" name="email" id="email" required placeholder="please enter your email">
+            <input type="email" name="email" id="email" required placeholder="please enter your email" autocomplete="off">
             <br><br>
             <label for="full-name">Full Name:*</label>
-            <input type="text" name="full-name" id="full-name" required pattern="[a-zA-Z]+" placeholder="Hassan Fakih">
+            <input type="text" name="full-name" id="full-name" required pattern="[a-zA-Z ]+" placeholder="Hassan Fakih">
             <br><br>
             <label for="student-id">Student ID:*</label>
             <input type="text" name="student-id" id="student-id" required pattern="[0-9]{9}" placeholder="121200078">
         </section>
 
-        <input type="submit" value="Done"> 
+        <button type="submit">Done!</button>
       </form>
 
       <footer>
@@ -128,6 +127,18 @@
         <img src="https://w7.pngwing.com/pngs/274/823/png-transparent-icon-essential-instagram-2016-app-logo-vector-images-social-networks.png" width="50px" height="50px">
         <p>Page made by Hassan Fakih Osman - 2023</p>
       </footer>
+
+      <script>
+        let survey = document.getElementById('survey');
+
+        survey.addEventListener("submit", (e) => {
+          let email = document.getElementById('email');
+          let fullName = document.getElementById('full-name');
+          let studentID = document.getElementById('student-id');
+
+          console.log(`Name: ${fullName}\nEmail: ${email}`)
+        });
+      </script>
 
     </main>
   </body>
